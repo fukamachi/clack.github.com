@@ -18,9 +18,9 @@
 
 <div id="main">
 
-<p>In this chapter, I tell you about <a href="http://clacklisp.org/doc/clack.builder.html">Clack.Builder</a> which is the most general way to use Clack Middleware. It builds up with calling <code>wrap</code> of Middlewares sequentially and returns a function also as an Application.</p>
+<p>In this chapter, I would like to introduce <a href="http://clacklisp.org/doc/clack.builder.html">Clack.Builder</a>, or the most common way to use Clack middlewares. Clack.Builder calls middlewares' <code>wrap</code>s sequentially and returns a function, which you can use as a Clack application.</p>
 
-<p>The syntax is easy to understand.</p>
+<p>The syntax of Clack.Builder is easy:</p>
 
 <pre>
 (builder
@@ -29,7 +29,7 @@
 ;=> Function (as an Application)
 </pre>
 
-<p>And, here's a real sample code.</p>
+<p>For example,</p>
 
 <pre>
 (import 'clack.builder:builder)
@@ -49,15 +49,15 @@
     #'app))
 </pre>
 
-<p><code>&lt;clack-middleware-session&gt;</code> is a middleware which enables a session management. By adding <code>:clack.session</code> to <code>env</code>, it allows to handle sessions as a hash table (See <a href="http://clacklisp.org/doc/clack.middleware.session.html">Clack.Middleware.Session</a>).
+<p><code>&lt;clack-middleware-session&gt;</code> is a middleware for session management, which adds <code>:clack.session</code> to <code>env</code> and enables you to handle sessions as a hash table. See <a href="http://clacklisp.org/doc/clack.middleware.session.html">Clack.Middleware.Session</a> for the details.
 
-<p>Notice that <code>builder</code> calls <code>wrap</code> from bottom to top. In this example, <code>#'app</code> would be wrapped by <code>&lt;clack-middleware-static&gt;</code> first, and be wrapped by <code>&lt;clack-middleware-session&gt;</code> next.</p>
+<p>Note that <code>builder</code> calls <code>wrap</code>s from bottom to top. In this example, <code>#'app</code> is wrapped by <code>&lt;clack-middleware-static&gt;</code> first, and the resulting entity is wrapped by <code>&lt;clack-middleware-session&gt;</code>.</p>
 
-<p>Remember the figure in <a href="07-middleware.html">Chapter 7</a>.</p>
+<p>Let's take a look at the figure in <a href="07-middleware.html">Chapter 7</a> again.</p>
 
 <img src="clack-middleware-2.png" width="480" height="300" />
 
-<p>In case of this figure, the outer middleware is <code>&lt;clack-middleware-session&gt;</code> and the inner one is <code>&lt;clack-middleware-static&gt;</code>.</p>
+<p>In terms of this figure, <code>&lt;clack-middleware-session&gt;</code> is the outer middleware, and <code>&lt;clack-middleware-static&gt;</code> is the inner one.</p>
 
 </div>
 
