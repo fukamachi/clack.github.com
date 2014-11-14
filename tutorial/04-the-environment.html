@@ -29,12 +29,9 @@
  :server-port 4242
  :request-uri "/sns/member?id=3"
  :server-protocol :HTTP/1.1
- :http-user-agent "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_6; en-US) ..."
  :remote-addr "127.0.0.1"
  :remote-port 26077
- :http-referer nil
- :http-host "localhost:4242"
- :http-cookies nil)
+ :headers #<HASH-TABLE :TEST EQUAL :COUNT 4 {10061F0F23}>)
 </pre>
 
 <br />
@@ -61,12 +58,9 @@
   <dt><code>:request-uri</code>  (Required, String)</dt>
   <dd>The request URI. Always starts with &quot;/&quot;.</dd>
   <dt><code>:raw-body</code>  (Optional, Stream)</dt>
-  <dt><code>:http-user-agent</code>  (Optional, String)</dt>
-  <dt><code>:http-referer</code>  (Optional, String)</dt>
   <dt><code>:remote-addr</code>  (Required, String)</dt>
   <dt><code>:remote-port</code>  (Required, Integer)</dt>
-  <dt><code>:http-server</code>  (Required, Keyword)</dt>
-  <dd>The name of the Clack handler, such as <code>:hunchentoot</code> and <code>:apache</code>.</dd>
+  <dt><code>:headers</code>  (Required, Hash-Table)</dt>
 </dl>
 
 </div>
