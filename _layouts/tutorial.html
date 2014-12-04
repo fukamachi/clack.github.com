@@ -8,6 +8,9 @@
   <body>
     <h1><a href="/">Clack</a></h1>
     <p class="tagline">{{ site.tagline }}</p>
+
+    <h2>Chapter {{ page.title | replace: '.', ':'}}</h2>
+
     {{ content }}
   </body>
 </html>
