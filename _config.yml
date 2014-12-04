@@ -1,0 +1,10 @@
+title: Clack
+description: >
+  Revenge of Lisp in Web
+
+baseurl: ""
+
+permalink: /news/:title
+
+# Build settings
+markdown: kramdown
