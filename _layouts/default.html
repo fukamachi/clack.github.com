@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <title>{% if page.title %}{{ page.title }} | {% else %}{% endif %}{{ site.title }}</title>
-    <link href="main.css" rel="stylesheet" type="text/css" />
+    <link href="{{ "/main.css" | prepend: site.baseurl }}" rel="stylesheet" type="text/css" />
   </head>
   <body>
     {{ content }}
