@@ -2,8 +2,6 @@
 ---
 @charset "UTF-8";
 
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
-
 /* Variables */
 
 $text-color: #222;
@@ -47,98 +45,98 @@ $column-count: 12;
 /* General style */
 
 body {
-  font-size: 14pt;
-  margin: 0 150px 40px;
-  line-height: 150%;
-  font-family: "Optima", "Nu Sans", Baskerville, "Times New Roman", "Arial", sans-serif;
+  color: $text-color;
+  font-family: 'Open Sans', sans-serif;
 }
 
-.header {
-  .logo, .github-buttons {
-    float: left;
-  }
-
-  .github-buttons {
-    margin: 40px 0 0 20px;
-  }
+a, a:visited {
+  color: $link-color;
+  text-decoration: none;
 }
 
-h1 {
-  font-size: 48pt;
-  margin-top: 40px;
-  margin-bottom: 0;
+footer {
+  @include row();
+  height: 170px;
+  padding: 20px;
+  background: $footer-background;
 
-  a {
-    color: black !important;
-    text-decoration: none;
-  }
-}
+  font-size: 1em;
 
-h2 {
-  font-size: 24pt;
-}
+  section {
+    @include column(1);
 
-.tagline {
-  margin: 0.4em auto auto 20px;
-  color: #888;
-  font-size: 0.9em;
-}
+    .title {
+      font-weight: bold;
+      font-size: 0.9em;
+      text-transform: uppercase;
+    }
 
-a {
-  &:link {
-    color: #005585;
-  }
+    ul {
+      margin-top: 8px;
+      list-style-type: none;
 
-  &:visited {
-    color: #485270;
-  }
+      li {
 
-  &:hover {
-    color: #b83800;
-  }
-}
-
-pre {
-  padding: 8px;
-  background-color: #eee;
-  white-space: pre-wrap;
-  font-family: Menlo, 'andale mono', 'lucida console', monospace;
-  font-size: 0.9em;
-  line-height: 1.6em;
-}
-
-#main {
-  margin: 0 10px;
-}
-
-#footer {
-  text-align: center;
-  font-size: 0.8em;
-  margin: 20px 4px 10px;
-  border-top: 1px solid #ccc;
-  padding: 4px;
-
-  div {
-    display: inline-block;
-    width: 250px;
+        a, a:visited {
+          color: gray;
+          font-size: 0.8em;
+        }
+      }
+    }
   }
 
-  .left {
-    text-align: left;
+  .info {
+    width: 200px;
+    padding-left: 30px;
+
+    .copy {
+      font-size: 0.8em;
+    }
   }
 
-  .center {
-    text-align: center;
-    width: 80px;
-  }
-
-  .right {
-    text-align: right;
+  section:not(.info) {
+    margin-left: 70px;
   }
 }
 
-.language {
-  position: absolute;
-  top: 0;
-  right: 150px;
+/* Home page style */
+
+.home {
+  header {
+    height: 300px;
+    background: #eee;
+  }
+
+  // General section style
+  section {
+    padding: 25px;
+    padding-bottom: 55px;
+
+    h1 {
+      margin: 25px;
+    }
+  }
+}
+
+.talks {
+  background: $talks-background;
+  color: white;
+
+  .talks-container {
+    @include row();
+    margin: 0 auto;
+    width: 70%;
+
+    .talk {
+      @include column(6);
+      text-align: center;
+
+      iframe {
+        margin-top: 15px;
+        border:1px solid #ccc;
+        border-width:1px 1px 0;
+        margin-bottom:5px;
+      }
+    }
+  }
 }
