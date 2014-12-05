@@ -5,7 +5,6 @@
 /* Variables */
 
 $text-color: #222;
-$link-color: #5DB5DE;
 
 $talks-background: #333;
 $news-background: #ececec;
@@ -45,18 +44,28 @@ $column-count: 12;
 /* General style */
 
 body {
-  color: $text-color;
-  font-family: 'Open Sans', sans-serif;
+  font-size: 14pt;
+  line-height: 150%;
+  font-family: "Optima", "Nu Sans", Baskerville, "Times New Roman", "Arial", sans-serif;
 }
 
-a, a:visited {
-  color: $link-color;
-  text-decoration: none;
+a {
+  &:link {
+    color: #005585;
+  }
+
+  &:visited {
+    color: #485270;
+  }
+
+  &:hover {
+    color: #b83800;
+  }
 }
 
 footer {
   @include row();
-  height: 170px;
+  height: 210px;
   padding: 20px;
   background: $footer-background;
 
@@ -131,11 +140,17 @@ footer {
       @include column(6);
       text-align: center;
 
+      a {
+        &:link, &:visited {
+          color: #41A6DF !important;
+        }
+      }
+
       iframe {
         margin-top: 15px;
-        border:1px solid #ccc;
-        border-width:1px 1px 0;
-        margin-bottom:5px;
+        border: 1px solid #ccc;
+        border-width: 1px 1px 0;
+        margin-bottom: 5px;
       }
     }
   }
