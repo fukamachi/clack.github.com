@@ -1,7 +1,50 @@
 ---
 ---
-
 @charset "UTF-8";
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
+
+/* Variables */
+
+$text-color: #222;
+$link-color: #5DB5DE;
+
+$talks-background: #333;
+$news-background: #ececec;
+$footer-background: #f6f6f6;
+
+$column-count: 12;
+
+/* A simple grid system */
+
+// Global reset
+*, *:after, *:before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+
+@mixin row() {
+  @include clearfix;
+  width: 100%;
+}
+
+@mixin column($width) {
+  float: left;
+  width: 100% / $column-count * $width;
+}
+
+/* General style */
 
 body {
   font-size: 14pt;
