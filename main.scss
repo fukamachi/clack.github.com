@@ -1,3 +1,6 @@
+---
+---
+
 @charset "UTF-8";
 
 body {
@@ -7,24 +10,25 @@ body {
   font-family: "Optima", "Nu Sans", Baskerville, "Times New Roman", "Arial", sans-serif;
 }
 
-.header .logo,
-.header .github-buttons {
-  float: left;
-}
+.header {
+  .logo, .github-buttons {
+    float: left;
+  }
 
-.header .github-buttons {
-  margin: 40px 0 0 20px;
+  .github-buttons {
+    margin: 40px 0 0 20px;
+  }
 }
 
 h1 {
   font-size: 48pt;
   margin-top: 40px;
   margin-bottom: 0;
-}
 
-h1 a {
-  color: black !important;
-  text-decoration: none;
+  a {
+    color: black !important;
+    text-decoration: none;
+  }
 }
 
 h2 {
@@ -37,16 +41,18 @@ h2 {
   font-size: 0.9em;
 }
 
-a:link {
-	color: #005585;
-}
+a {
+  &:link {
+    color: #005585;
+  }
 
-a:visited {
-	color: #485270;
-}
+  &:visited {
+    color: #485270;
+  }
 
-a:hover {
-	color: #b83800;
+  &:hover {
+    color: #b83800;
+  }
 }
 
 pre {
@@ -68,22 +74,24 @@ pre {
   margin: 20px 4px 10px;
   border-top: 1px solid #ccc;
   padding: 4px;
-}
 
-#footer div {
-  display: inline-block;
-  width: 250px;
-}
+  div {
+    display: inline-block;
+    width: 250px;
+  }
 
-#footer .left {
-  text-align: left;
-}
-#footer .center {
-  text-align: center;
-  width: 80px;
-}
-#footer .right {
-  text-align: right;
+  .left {
+    text-align: left;
+  }
+
+  .center {
+    text-align: center;
+    width: 80px;
+  }
+
+  .right {
+    text-align: right;
+  }
 }
 
 .language {
