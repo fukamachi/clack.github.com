@@ -1,0 +1,15 @@
+/* Documentation style */
+
+.tutorial-container {
+  @include row();
+  width: 80%;
+  margin: 0 auto;
+
+  aside {
+    @include column(3);
+  }
+
+  article {
+    @include column(9);
+  }
+}
