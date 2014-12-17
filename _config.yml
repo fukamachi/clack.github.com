@@ -19,6 +19,7 @@ links:
   rss: /feed.xml
   api: http://quickdocs.org/clack/api
 
+# Code samples
 code:
   intro: |
     (clackup
