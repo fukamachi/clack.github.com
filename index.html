@@ -6,34 +6,30 @@ layout: default
 
 <div class="home">
   <section class="intro">
-    <p>Clack is a web application environment for Common Lisp inspired by Python's WSGI and Ruby's Rack.</p>
+    <p>
+      Clack is a web application environment for Common Lisp inspired by
+      Python's WSGI and Ruby's Rack. It's easy to use:
+    </p>
 
-    <ul>
-      <li><a href="http://quickdocs.org/clack/">Documentation</a></li>
-      <li><a href="./tutorial/">Tutorial</a></li>
-      <li><a href="https://github.com/fukamachi/clack/contributors">Contributors</a></li>
-      <li><a href="https://github.com/fukamachi/clack/">Code</a></li>
-    </ul>
-
-    <h2>Welcome to Clack!</h2>
-
-    <pre style="font-size: 14pt">
-      (clackup
-      (lambda (env)
-      '(200
-      (:content-type "text/plain")
-      ("Hello, Clack!"))))
+    <pre>
+      <code class="lisp">
+{{ site.code.intro }}
+      </code>
     </pre>
 
-    Open your web browser and go to <a href="http://localhost:5000/">http://localhost:5000/</a>.
+    <p>
+      Open your web browser and go to <a href="http://localhost:5000/">http://localhost:5000/</a>.
+    </p>
 
+    <p>
+      And it's easy to setup: Just install <a href="http://www.quicklisp.org/beta/">Quicklisp</a> and type this at the REPL:
+    </p>
 
-    <h2>Easy to Setup</h2>
-
-    Install <a href="http://www.quicklisp.org/beta/">Quicklisp</a> and use:
-
-    <pre style="font-size: 14pt">
-      (ql:quickload :clack)</pre>
+    <pre>
+      <code class="lisp">
+(ql:quickload :clack)
+      </code>
+    </pre>
   </section>
 
   <section class="servers">
@@ -49,6 +45,10 @@ layout: default
           If a new, faster server comes out, it can be added as a Clack <i>handler</i>,
           ensuring Clack is not tied to any particular HTTP server implementation.
         </p>
+        <p>
+          Additionally, you can try different servers to figure out what setup
+          is right for your application's needs.
+        </p>
       </div>
       <dl>
         <dt>
@@ -61,25 +61,26 @@ layout: default
           <a href="http://www.fastcgi.com/">FastCGI</a></li>
         </dt>
         <dd>
-          FastCGI binding
+          FastCGI binding.
         </dd>
         <dt>
           <a href="http://wookie.beeets.com/">Wookie</a>
         </dt>
         <dd>
-          An asynchronous HTTP server.
+          Asynchronous HTTP server.
         </dd>
         <dt>
           <a href="https://github.com/fukamachi/woo">Woo</a>
         </dt>
         <dd>
-          A fast non-blocking HTTP server
+          Fast non-blocking HTTP server, built on a pure-CL high-performance
+          HTTP stack.
         </dd>
         <dt>
           <a href="https://github.com/gigamonkey/toot">Toot</a>
         </dt>
         <dd>
-          A stripped-down hunchentoot.
+          Stripped-down hunchentoot.
         </dd>
       </dl>
     </div>

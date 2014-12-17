@@ -20,6 +20,13 @@ links:
   api: http://quickdocs.org/clack/api
 
 code:
+  intro: |
+    (clackup
+      (lambda (env)
+        '(200
+          (:content-type "text/plain")
+          ("Hello, Clack!"))))
+
   ningle: |
     (defvar *app* (make-instance 'ningle:<app>))
 
