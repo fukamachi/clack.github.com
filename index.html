@@ -34,16 +34,55 @@ layout: default
 
     <pre style="font-size: 14pt">
       (ql:quickload :clack)</pre>
+  </section>
 
-    <h2>Server</h2>
-
-    <ul>
-      <li><a href="http://weitz.de/hunchentoot/">Hunchentoot</a>: Web server written in Common Lisp</li>
-      <li><a href="http://www.fastcgi.com/">FastCGI</a></li>
-      <li><a href="http://wookie.beeets.com/">Wookie</a>: An asynchronous HTTP server</li>
-      <li><a href="https://github.com/fukamachi/woo">Woo</a>: A fast non-blocking HTTP server</li>
-      <li><a href="https://github.com/gigamonkey/toot">Toot</a></li>
-    </ul>
+  <section class="servers">
+    <h2>Supported Servers</h2>
+    <div class="container">
+      <div class="desc">
+        <p>
+          Clack is backend-agnostic: The internals of the server are completely
+          abstracted so you can focus on writing your application, and let the
+          server do all the hard work.
+        </p>
+        <p>
+          If a new, faster server comes out, it can be added as a Clack <i>handler</i>,
+          ensuring Clack is not tied to any particular HTTP server implementation.
+        </p>
+      </div>
+      <dl>
+        <dt>
+          <a href="http://weitz.de/hunchentoot/">Hunchentoot</a>
+        </dt>
+        <dd>
+          Web server written in Common Lisp.
+        </dd>
+        <dt>
+          <a href="http://www.fastcgi.com/">FastCGI</a></li>
+        </dt>
+        <dd>
+          FastCGI binding
+        </dd>
+        <dt>
+          <a href="http://wookie.beeets.com/">Wookie</a>
+        </dt>
+        <dd>
+          An asynchronous HTTP server.
+        </dd>
+        <dt>
+          <a href="https://github.com/fukamachi/woo">Woo</a>
+        </dt>
+        <dd>
+          A fast non-blocking HTTP server
+        </dd>
+        <dt>
+          <a href="https://github.com/gigamonkey/toot">Toot</a>
+        </dt>
+        <dd>
+          A stripped-down hunchentoot.
+        </dd>
+      </dl>
+    </div>
   </section>
 
   <section class="frameworks">

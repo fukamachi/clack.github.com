@@ -22,6 +22,36 @@
   width: 80%;
 }
 
+.servers {
+  @include row();
+
+  .container {
+    @include row();
+    width: 65%;
+    margin: 0 auto;
+
+    .desc, dl {
+      padding: 25px;
+    }
+
+    .desc {
+      @include column(6);
+
+      p {
+        text-align: justify;
+      }
+    }
+
+    dl {
+      @include column(6);
+
+      dd {
+        padding-left: 15px;
+      }
+    }
+  }
+}
+
 .frameworks {
   .framework-list {
     @include row();
