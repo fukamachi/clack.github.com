@@ -43,6 +43,15 @@ $column-count: 12;
 
 /* General style */
 
+html, body {
+  height: 100%;
+}
+
+main {
+  min-height: 100%;
+}
+
+
 body {
   font-size: 14pt;
   line-height: 150%;
@@ -162,5 +171,21 @@ footer {
         margin-bottom: 5px;
       }
     }
+  }
+}
+
+/* Documentation style */
+
+.tutorial-container {
+  @include row();
+  width: 80%;
+  margin: 0 auto;
+
+  aside {
+    @include column(3);
+  }
+
+  article {
+    @include column(9);
   }
 }

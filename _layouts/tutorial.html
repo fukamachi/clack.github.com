@@ -2,13 +2,15 @@
 layout: default
 ---
 
-<h1><a href="/">Clack</a></h1>
-<p class="tagline">{{ site.tagline }}</p>
-
-<h2>Chapter {{ page.title | replace: '.', ':'}}</h2>
-
-<p class="language">
-  <strong>English</strong> | <a href="ja/{{ page.url }}">日本語</a>
-</p>
-
-{{ content }}
+<div class="tutorial-container">
+  <p class="language">
+    <strong>English</strong> | <a href="ja/{{ page.url }}">日本語</a>
+  </p>
+  <aside>
+    {% include toc.html %}
+  </aside>
+  <article>
+    <h2>Chapter {{ page.title | replace: '.', ':'}}</h2>
+    {{ content }}
+  </article>
+</div>
