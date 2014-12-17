@@ -18,3 +18,27 @@ links:
   contrib: https://github.com/fukamachi/clack/graphs/contributors
   rss: /feed.xml
   api: http://quickdocs.org/clack/api
+
+code:
+  ningle: |
+    (defvar *app* (make-instance 'ningle:<app>))
+
+    (setf (ningle:route *app* "/")
+          "Welcome to ningle!")
+
+    (setf (ningle:route *app* "/login" :method :POST)
+          #'(lambda (params)
+              (if (authorize (getf params :|username|)
+                             (getf params :|password|))
+                "Authorized!"
+                "Failed...Try again.")))
+
+    (clack:clackup *app*)
+
+  caveman: |
+    (defparameter *app* (make-instance '<app>))
+
+    @route GET "/"
+    (defun index ()
+      (with-layout (:title "Welcome to My site")
+        (render #P"index.tmpl")))

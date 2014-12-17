@@ -22,11 +22,30 @@
   width: 80%;
 }
 
+.frameworks {
+  .framework-list {
+    @include row();
+    width: 70%;
+    margin: 0 auto;
+
+    .framework {
+      @include column(6);
+
+      h3 {
+        text-align: center;
+      }
+
+      pre {
+      }
+    }
+  }
+}
+
 .talks {
   background: $talks-background;
   color: white;
 
-  .talks-container {
+  .talk-list {
     @include row();
     margin: 0 auto;
     width: 70%;
