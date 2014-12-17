@@ -2,7 +2,21 @@
 layout: default
 ---
 
-{% include header.html %}
+<header class="page-header">
+  <div class="logo">
+    <h1>Clack</h1>
+    <p class="tagline">{{ site.tagline }}</p>
+  </div>
+
+  <div class="github-buttons">
+    <iframe class="gh-btn"
+            src="http://ghbtns.com/github-btn.html?user=fukamachi&repo=clack&type=watch&count=true&size=large"
+            allowtransparency="true" frameborder="0" scrolling="0" width="140" height="30"></iframe>
+    <iframe class="gh-btn"
+            src="http://ghbtns.com/github-btn.html?user=fukamachi&repo=clack&type=fork&count=true&size=large"
+            allowtransparency="true" frameborder="0" scrolling="0" width="140" height="30"></iframe>
+  </div>
+</header>
 
 <div class="home">
   <section class="intro">
