@@ -51,19 +51,23 @@ layout: default
 
     <div class="framework-list">
       <div class="framework">
-        <h3><a href="http://8arrow.org/ningle/">ningle</a></h3>
+        <div class="desc">
+          <h3><a href="http://8arrow.org/ningle/">ningle</a></h3>
+        </div>
         <pre>
           <code class="lisp">
-{{ site.code.ningle }}
+{{ site.code.ningle | xml_escape }}
           </code>
         </pre>
       </div>
 
       <div class="framework">
-        <h3><a href="http://8arrow.org/caveman/">Caveman</a></h3>
+        <div class="desc">
+          <h3><a href="http://8arrow.org/caveman/">Caveman</a></h3>
+        </div>
         <pre>
           <code class="lisp">
-{{ site.code.caveman }}
+{{ site.code.caveman | xml_escape}}
           </code>
         </pre>
       </div>
