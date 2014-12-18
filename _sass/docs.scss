@@ -1,15 +1,32 @@
 /* Documentation style */
 
+.doc-header {
+  background: #eee;
+  padding: 50px;
+
+  .logo {
+    margin-bottom: 25px;
+
+    h1 {
+      margin-bottom: 5px;
+    }
+  }
+}
+
 .tutorial-container {
   @include row();
   width: 80%;
   margin: 0 auto;
+  margin-top: 45px;
 
   aside {
     @include column(3);
+
+    border-right: 1px solid #ccc;
   }
 
   article {
     @include column(9);
+    padding-left: 25px;
   }
 }

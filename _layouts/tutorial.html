@@ -2,10 +2,15 @@
 layout: default
 ---
 
-<div class="tutorial-container">
-  <p class="language">
+<header class="doc-header">
+  <h1>{{ page.title }}</h1>
+  <div class="language">
     <strong>English</strong> | <a href="ja/{{ page.url }}">日本語</a>
-  </p>
+  </div>
+</header>
+
+<div class="tutorial-container">
+
   <aside>
     {% include toc.html %}
   </aside>
