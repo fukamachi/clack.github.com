@@ -53,3 +53,21 @@ code:
     (defun index ()
       (with-layout (:title "Welcome to My site")
         (render #P"index.tmpl")))
+
+# Text
+frameworks:
+  ningle: |
+
+    Ningle is a minimalist web framework inspired by Python's [Flask][flask] and
+    Ruby's [Sinatra][sinatra].
+
+    [flask]: http://flask.pocoo.org/
+    [sinatra]: http://www.sinatrarb.com/
+
+  caveman: |
+
+    Caveman is larger in scope than Ningle, and closer to [Django][django] in
+    how its applications are structured. It has a little bit of magic, but not
+    enough that it creates problems for developers.
+
+    [django]: https://www.djangoproject.com/
