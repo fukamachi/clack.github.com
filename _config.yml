@@ -19,6 +19,7 @@ links:
   issues: https://github.com/fukamachi/clack/issues
   contrib: https://github.com/fukamachi/clack/graphs/contributors
   rss: /feed.xml
+  docs: http://quickdocs.org/clack/
   api: http://quickdocs.org/clack/api
 
 # Code samples
