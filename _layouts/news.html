@@ -4,22 +4,15 @@ layout: default
 
 <header class="news-header">
   <h1>{{ page.title }}</h1>
-  {% if page.tags %}
-    <ul class="tags">
-      <span class="paren"><code>(</code></span>
-      {% for tag in page.tags %}
-        <li><code>:{{ tag }}</code></li>
-      {% endfor %}
-      <span class="paren"><code>)</code></span>
-    </ul>
+  {% if page.author %}
+    <span class="tagline">Posted by {{ page.author }} on {{ page.date | date: "%b %-d, %Y" }}</span>
+  {% else %}
+    <span>News and announcements from the Clack project</span>
   {% endif %}
 </header>
 
 <div class="news">
   <article>
-    {% if page.author %}
-      <span class="tagline">Posted by {{ page.author }} on {{ page.date | date: "%b %-d, %Y" }}</span>
-    {% endif %}
     {{ content }}
   </article>
 </div>
