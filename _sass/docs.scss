@@ -16,8 +16,7 @@
 .tutorial-container {
   @include row();
   width: 80%;
-  margin: 0 auto;
-  margin-top: 45px;
+  margin: 45px auto;
 
   aside {
     @include column(3);
@@ -28,21 +27,5 @@
   article {
     @include column(9);
     padding-left: 25px;
-    margin-bottom: 80px;
-
-    p {
-      text-align: justfiy;
-      text-indent: 25px;
-      margin: 15px 0;
-    }
-
-    pre {
-      margin: 25px;
-    }
-
-    img {
-      display: block;
-      margin: 55px auto;
-    }
   }
 }

@@ -56,6 +56,28 @@ nav {
   }
 }
 
+article {
+  p {
+    text-align: justfiy;
+    text-indent: 25px;
+    margin: 15px 0;
+  }
+
+  ul:not(.news-list) {
+    padding-left: 35px;
+    list-style-type: none;
+  }
+
+  pre {
+    margin: 25px;
+  }
+
+  img {
+    display: block;
+    margin: 55px auto;
+  }
+}
+
 footer {
   @include row();
   height: 210px;
