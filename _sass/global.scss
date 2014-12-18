@@ -16,6 +16,8 @@ body {
 }
 
 a {
+  text-decoration: none;
+
   &:link {
     color: $link-color;
   }
@@ -43,11 +45,16 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 12pt;
 }
 
-nav {
-  $navbar-height: 60px;
+dl {
+  dd {
+    padding-left: 30px;
+  }
+}
 
+nav {
   height: $navbar-height;
   line-height: $navbar-height;
+  background: $navbar-background;
 
   .container {
     @include row();

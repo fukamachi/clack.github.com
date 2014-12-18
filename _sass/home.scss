@@ -40,6 +40,8 @@
 }
 
 .servers {
+  background: $servers-background;
+
   @include row();
 
   .container {
@@ -70,6 +72,8 @@
 }
 
 .frameworks {
+  background: $frameworks-background;
+
   .framework-list {
     @include row();
     width: 70%;
@@ -95,7 +99,6 @@
 
 .talks {
   background: $talks-background;
-  color: white;
 
   .talk-list {
     @include row();
@@ -105,12 +108,6 @@
     .talk {
       @include column(6);
       text-align: center;
-
-      a {
-        &:link, &:visited {
-          color: #41A6DF !important;
-        }
-      }
 
       iframe {
         margin-top: 15px;

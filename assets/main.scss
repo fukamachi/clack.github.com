@@ -10,23 +10,30 @@
 $text-color: #222;
 
 $link-color: #005585;
-$link-visited-color: #485270;
+$link-visited-color: $link-color;
 $link-hover-color: #b83800;
 
-$talks-background: #333;
+$servers-background: #fff;
+$frameworks-background: #fff;
+$talks-background: #fff;
+
+$navbar-background: #fff;
 $footer-background: #f6f6f6;
 
-$home-header-background: #eee;
-$docs-header-background: #eee;
-$news-header-background: #eee;
+$home-header-background: #EEF2F2;
+$docs-header-background: #EEF2F2;
+$news-header-background: #EEF2F2;
 
 $column-count: 12;
 
 $text-font: 'Source Sans Pro', sans-serif;
-$header-font: 'Roboto', sans-serif;;
+$header-font: 'Roboto', sans-serif;
+
+$navbar-height: 60px;
 
 $header-height: 160px;
 $header-padding: 50px;
+
 
 @import "grid";
 @import "global";
