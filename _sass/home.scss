@@ -1,7 +1,7 @@
 /* Home page style */
 
 .page-header {
-  background: #eee;
+  background: $home-header-background;
   padding: 50px;
 
   .logo {
@@ -32,7 +32,11 @@
 
 .intro {
   margin: 0 auto;
-  width: 80%;
+  width: 50%;
+
+  pre {
+    margin-bottom: 18px;
+  }
 }
 
 .servers {

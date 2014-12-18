@@ -17,15 +17,15 @@ body {
 
 a {
   &:link {
-    color: #005585;
+    color: $link-color;
   }
 
   &:visited {
-    color: #485270;
+    color: $link-visited-color;
   }
 
   &:hover {
-    color: #b83800;
+    color: $link-hover-color;
   }
 }
 
