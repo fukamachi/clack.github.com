@@ -12,7 +12,7 @@ main {
 body {
   font-size: 14pt;
   line-height: 150%;
-  font-family: "Optima", "Nu Sans", Baskerville, "Times New Roman", "Arial", sans-serif;
+  font-family: $text-font;
 }
 
 a {
@@ -31,6 +31,7 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 20px;
+  font-family: $header-font;
 }
 
 nav {
@@ -59,7 +60,7 @@ nav {
 article {
   p {
     text-align: justfiy;
-    margin: 18px 0;
+    margin-bottom: 18px;
   }
 
   ul:not(.news-list) {
