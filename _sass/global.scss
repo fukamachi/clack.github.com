@@ -33,6 +33,29 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 20px;
 }
 
+nav {
+  $navbar-height: 60px;
+
+  height: $navbar-height;
+  line-height: $navbar-height;
+
+  .container {
+    @include row();
+    width: 80%;
+    margin: 0 auto;
+
+    ul {
+      list-style-type: none;
+      float: right;
+
+      li {
+        display: inline-block;
+        padding-left: 15px;
+      }
+    }
+  }
+}
+
 footer {
   @include row();
   height: 210px;
