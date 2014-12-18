@@ -25,6 +25,9 @@ $column-count: 12;
 $text-font: 'Source Sans Pro', sans-serif;
 $header-font: 'Roboto', sans-serif;;
 
+$header-height: 160px;
+$header-padding: 50px;
+
 @import "grid";
 @import "global";
 @import "home";

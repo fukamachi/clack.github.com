@@ -2,7 +2,8 @@
 
 .doc-header {
   background: $docs-header-background;
-  padding: 50px;
+  padding: $header-padding;
+  height: $header-height;
 
   .logo {
     margin-bottom: 25px;

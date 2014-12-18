@@ -34,6 +34,15 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $header-font;
 }
 
+:not(pre) > code {
+  font-family: Consolas,"Liberation Mono",Courier,monospace;
+  background-color: #F6F6F6;
+  padding: 2px 5px;
+  border: 1px solid #DDD;
+  border-radius: 3px;
+  font-size: 12pt;
+}
+
 nav {
   $navbar-height: 60px;
 
