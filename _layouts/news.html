@@ -5,19 +5,21 @@ layout: default
 <header class="news-header">
   <h1>{{ page.title }}</h1>
   {% if page.tags %}
-    <div class="tags">
-      <ul>
-        {% for tag in page.tags %}
-          <li>{{ tag }}</li>
-        {% endfor %}
-      </ul>
-    </div>
+    <ul class="tags">
+      <span class="paren"><code>(</code></span>
+      {% for tag in page.tags %}
+        <li><code>:{{ tag }}</code></li>
+      {% endfor %}
+      <span class="paren"><code>)</code></span>
+    </ul>
   {% endif %}
 </header>
 
 <div class="news">
   <article>
-    <h2>{{ page.title }}</h2>
+    {% if page.author %}
+      <span class="tagline">Posted by {{ page.author }} on {{ page.date | date: "%b %-d, %Y" }}</span>
+    {% endif %}
     {{ content }}
   </article>
 </div>
