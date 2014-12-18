@@ -1,0 +1,120 @@
+/* Home page style */
+
+.page-header {
+  background: $home-header-background;
+  padding: 50px;
+
+  .logo {
+    margin-bottom: 25px;
+
+    h1 {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.home {
+  // General section style
+  section {
+    padding: 25px;
+    padding-bottom: 55px;
+
+    h1 {
+      margin: 25px;
+    }
+  }
+
+  p {
+    text-indent: 12px;
+    margin-bottom: 18px;
+  }
+}
+
+.intro {
+  margin: 0 auto;
+  width: 50%;
+
+  pre {
+    margin-bottom: 18px;
+  }
+}
+
+.servers {
+  background: $servers-background;
+
+  @include row();
+
+  .container {
+    @include row();
+    width: 65%;
+    margin: 0 auto;
+
+    .desc, dl {
+      padding: 25px;
+    }
+
+    .desc {
+      @include column(6);
+
+      p {
+        text-align: justify;
+      }
+    }
+
+    dl {
+      @include column(6);
+
+      dd {
+        padding-left: 15px;
+      }
+    }
+  }
+}
+
+.frameworks {
+  background: $frameworks-background;
+
+  .framework-list {
+    @include row();
+    width: 70%;
+    margin: 0 auto;
+
+    .framework {
+      padding: 25px;
+
+      .desc {
+        @include column(6);
+
+        p {
+          margin: 15px;
+        }
+      }
+
+      pre, code {
+        height: 350px;
+      }
+    }
+  }
+}
+
+.talks {
+  background: $talks-background;
+
+  .talk-list {
+    @include row();
+    margin: 0 auto;
+    width: 70%;
+
+    .talk {
+      @include column(6);
+      text-align: center;
+
+      iframe {
+        margin-top: 15px;
+        border: 1px solid #ccc;
+        border-width: 1px 1px 0;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}

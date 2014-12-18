@@ -1,0 +1,141 @@
+/* General style */
+
+html, body {
+  height: 100%;
+}
+
+main {
+  min-height: 100%;
+}
+
+
+body {
+  font-size: 14pt;
+  line-height: 150%;
+  font-family: $text-font;
+}
+
+a {
+  text-decoration: none;
+
+  &:link {
+    color: $link-color;
+  }
+
+  &:visited {
+    color: $link-visited-color;
+  }
+
+  &:hover {
+    color: $link-hover-color;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 20px;
+  font-family: $header-font;
+}
+
+:not(pre) > code {
+  font-family: Consolas,"Liberation Mono",Courier,monospace;
+  background-color: #F6F6F6;
+  padding: 2px 5px;
+  border: 1px solid #DDD;
+  border-radius: 3px;
+  font-size: 12pt;
+}
+
+dl {
+  dd {
+    padding-left: 30px;
+  }
+}
+
+nav {
+  height: $navbar-height;
+  line-height: $navbar-height;
+  background: $navbar-background;
+
+  .container {
+    @include row();
+    width: 80%;
+    margin: 0 auto;
+
+    ul {
+      list-style-type: none;
+      float: right;
+
+      li {
+        display: inline-block;
+        padding-left: 15px;
+      }
+    }
+  }
+}
+
+article {
+  p {
+    text-align: justfiy;
+    margin-bottom: 18px;
+  }
+
+  ul:not(.news-list) {
+    padding-left: 35px;
+    margin: 25px 0;
+    list-style-type: none;
+  }
+
+  pre {
+    margin: 25px;
+  }
+
+  img {
+    display: block;
+    margin: 55px auto;
+  }
+}
+
+footer {
+  @include row();
+  height: 210px;
+  padding: 20px;
+  background: $footer-background;
+
+  font-size: 1em;
+
+  section {
+    @include column(1);
+
+    .title {
+      font-weight: bold;
+      font-size: 0.9em;
+      text-transform: uppercase;
+    }
+
+    ul {
+      margin-top: 8px;
+      list-style-type: none;
+
+      li {
+
+        a, a:visited {
+          color: gray;
+          font-size: 0.8em;
+        }
+      }
+    }
+  }
+
+  .info {
+    width: 200px;
+    padding-left: 30px;
+
+    .copy {
+      font-size: 0.8em;
+    }
+  }
+
+  section:not(.info) {
+    margin-left: 70px;
+  }
+}

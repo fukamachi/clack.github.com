@@ -10,3 +10,64 @@ permalink: /news/:title
 
 # Build settings
 markdown: kramdown
+
+excerpt_separator: "<!-- sep -->"
+
+# Links
+links:
+  repo: https://github.com/fukamachi/clack
+  issues: https://github.com/fukamachi/clack/issues
+  contrib: https://github.com/fukamachi/clack/graphs/contributors
+  rss: /feed.xml
+  docs: http://quickdocs.org/clack/
+  api: http://quickdocs.org/clack/api
+
+# Code samples
+code:
+  intro: |
+    (clackup
+      (lambda (env)
+        '(200
+          (:content-type "text/plain")
+          ("Hello, Clack!"))))
+
+  ningle: |
+    (defvar *app* (make-instance 'ningle:<app>))
+
+    (setf (ningle:route *app* "/")
+          "Welcome to ningle!")
+
+    (setf (ningle:route *app* "/login" :method :POST)
+          #'(lambda (params)
+              (if (authorize (getf params :|username|)
+                             (getf params :|password|))
+                "Authorized!"
+                "Failed...Try again.")))
+
+    (clack:clackup *app*)
+
+  caveman: |
+    (defparameter *app* (make-instance '<app>))
+
+    @route GET "/"
+    (defun index ()
+      (with-layout (:title "Welcome to My site")
+        (render #P"index.tmpl")))
+
+# Text
+frameworks:
+  ningle: |
+
+    Ningle is a minimalist web framework inspired by Python's [Flask][flask] and
+    Ruby's [Sinatra][sinatra].
+
+    [flask]: http://flask.pocoo.org/
+    [sinatra]: http://www.sinatrarb.com/
+
+  caveman: |
+
+    Caveman is larger in scope than Ningle, and closer to [Django][django] in
+    how its applications are structured. It has a little bit of magic, but not
+    enough that it creates problems for developers.
+
+    [django]: https://www.djangoproject.com/
