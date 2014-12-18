@@ -25,8 +25,8 @@ all of them, except that you are creating a Clack handler or an adapter between
 Clack and a web server.
 
 `:request-method` (Required, Keyword)
-: The HTTP request method: ` :GET` , ` :HEAD` , ` :OPTIONS` , ` :PUT` , `
-  :POST`, or ` :DELETE` .
+: The HTTP request method: `:GET`, `:HEAD`, `:OPTIONS`, `:PUT`, `:POST`, or
+  `:DELETE`.
 
 `:script-name` (Required, String)
 : The initial portion of the request URI path that corresponds to the Clack
