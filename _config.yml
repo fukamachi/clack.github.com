@@ -31,6 +31,13 @@ code:
           (:content-type "text/plain")
           ("Hello, Clack!"))))
 
+  caveman: |
+    (defparameter *app* (make-instance '<app>))
+
+    @route GET "/"
+    (defun index ()
+      (render #P"index.tmpl"))
+
   ningle: |
     (defvar *app* (make-instance 'ningle:<app>))
 
@@ -46,15 +53,29 @@ code:
 
     (clack:clackup *app*)
 
-  caveman: |
-    (defparameter *app* (make-instance '<app>))
+  lucerne: |
+    (defapp app)
 
-    @route GET "/"
-    (defun index ()
-      (render #P"index.tmpl"))
+    @route app "/"
+    (defview index ()
+      (respond "<h1>Welcome to Lucerne</h1>"))
+
+    @route app "/greet/:name"
+    (defview greet (name)
+      (respond (format nil "Hello, ~A!" name)))
+
+    (start app)
 
 # Text
 frameworks:
+  caveman: |
+
+    Caveman is larger in scope than Ningle, and closer to [Django][django] in
+    how its applications are structured. It has a little bit of magic, but not
+    enough that it creates problems for developers.
+
+    [django]: https://www.djangoproject.com/
+
   ningle: |
 
     Ningle is a minimalist web framework inspired by Python's [Flask][flask] and
@@ -63,10 +84,6 @@ frameworks:
     [flask]: http://flask.pocoo.org/
     [sinatra]: http://www.sinatrarb.com/
 
-  caveman: |
+  lucerne: |
 
-    Caveman is larger in scope than Ningle, and closer to [Django][django] in
-    how its applications are structured. It has a little bit of magic, but not
-    enough that it creates problems for developers.
-
-    [django]: https://www.djangoproject.com/
+    Lucerne is yet another lightweight web framework.
